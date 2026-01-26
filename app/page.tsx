@@ -1,3 +1,4 @@
+// page.tsx
 "use client"
 
 import { useState } from "react"
@@ -6,8 +7,11 @@ import { EssayDisplay } from "@/components/essay-display"
 import { Answers } from "@/components/reflection-form"
 
 export default function Home() {
+
   const [essay, setEssay] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
+  const [step, setStep] = useState<"form" | "result">("form")
+
   const handleGenerate = async (answers: Answers) => {
     setIsLoading(true)
     try {
@@ -18,14 +22,18 @@ export default function Home() {
       })
       const data = await response.json()
       setEssay(data.essay)
+      setStep("result")
     } finally {
       setIsLoading(false)
     }
   }
+  
 
   const handleReset = () => {
     setEssay(null)
+    setStep("form")
   }
+  
 
   return (
     <main className="min-h-screen bg-background">

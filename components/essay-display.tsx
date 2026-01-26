@@ -1,3 +1,4 @@
+// essay-display.tsx
 "use client"
 
 import { useState } from "react"
@@ -114,17 +115,17 @@ export function EssayDisplay({ essay, onReset }: EssayDisplayProps) {
           <Image className="w-4 h-4" />
           이미지로 저장하기
         </Button>
-        <Button
+        {/* <Button
           onClick={saveStoryImage}
           variant="outline"
           className="flex items-center gap-2 bg-transparent"
         >
         스토리용 이미지 저장
-       </Button>
+       </Button> */}
 
       </div>
       {/* 스토리 저장용 (화면에는 안 보임) */}
-      <div
+      {/* <div
         id="story-card"
         style={{
           position: "absolute",
@@ -162,7 +163,7 @@ export function EssayDisplay({ essay, onReset }: EssayDisplayProps) {
         <div style={{ fontSize: "22px", opacity: 0.6 }}>
           monthly reflection
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

@@ -1,3 +1,4 @@
+// layout.tsx
 import React from "react"
 import type { Metadata, Viewport } from 'next'
 import { Noto_Serif_KR, Noto_Sans_KR } from 'next/font/google'
