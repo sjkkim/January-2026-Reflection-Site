@@ -11,22 +11,39 @@ export default function Home() {
   const [essay, setEssay] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [step, setStep] = useState<"form" | "result">("form")
+  const [imageUrl, setImageUrl] = useState<string | null>(null)
 
   const handleGenerate = async (answers: Answers) => {
     setIsLoading(true)
     try {
+      // 회고 텍스트 생성
       const response = await fetch("/api/generate-reflection", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ answers }),
       })
       const data = await response.json()
+  
       setEssay(data.essay)
+  
+      // 이미지 생성 API 호출
+      const imageRes = await fetch("/api/reflection-image", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ essay: data.essay }),
+      })
+  
+      // blob으로 받아서 URL 생성
+      const blob = await imageRes.blob()
+      const url = URL.createObjectURL(blob)
+  
+      setImageUrl(url)
       setStep("result")
     } finally {
       setIsLoading(false)
     }
   }
+  
   
 
   const handleReset = () => {
@@ -49,8 +66,13 @@ export default function Home() {
         </header>
 
         {/* Main Content */}
-        {essay ? (
-          <EssayDisplay essay={essay} onReset={handleReset} />
+        {step === "result" && essay ? (
+          // <EssayDisplay essay={essay} onReset={handleReset} />
+          <EssayDisplay
+            essay={essay}
+            imageUrl={imageUrl}
+            onReset={handleReset}
+          />
         ) : (
           <ReflectionForm onGenerate={handleGenerate} isLoading={isLoading} />
         )}
