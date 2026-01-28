@@ -93,7 +93,7 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
         <Input
           value={answers.q1}
           onChange={(e) => updateAnswer("q1", e.target.value)}
-          placeholder="지금 떠오르는 표현을 적어보세요"
+          placeholder="ex) 조용하지만 계속 마음이 바빴던 시간"
           className="bg-input border-border focus:ring-ring"
         />
       </div>
@@ -136,7 +136,7 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
         <Input
           value={answers.q2Reason}
           onChange={(e) => updateAnswer("q2Reason", e.target.value)}
-          placeholder="그렇게 느낀 이유가 있다면 적어보세요"
+          placeholder="어떤 순간들 때문에 그렇게 느꼈는지 떠올려보세요"
           className="bg-input border-border mt-2"
         />
       </div>
@@ -149,7 +149,8 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
         <Textarea
           value={answers.q3}
           onChange={(e) => updateAnswer("q3", e.target.value)}
-          placeholder="떠오르는 장면이 있다면"
+          placeholder="언제, 어디서, 누구와 있었는지 떠올려보세요
+          아주 사소한 장면도 괜찮아요"
           className="bg-input border-border min-h-[100px]"
         />
       </div>
@@ -193,12 +194,6 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
             <Label htmlFor="q4-4" className="font-normal cursor-pointer">특별한 이유는 없지만 잊히지 않아서</Label>
           </div>
         </RadioGroup>
-        <Input
-          value={answers.q4Reason}
-          onChange={(e) => updateAnswer("q4Reason", e.target.value)}
-          placeholder="왜 기억에 남았는지 적어보세요"
-          className="bg-input border-border mt-2"
-        />
       </div>
 
       {/* Q5 */}
@@ -209,7 +204,7 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
         <Input
           value={answers.q5}
           onChange={(e) => updateAnswer("q5", e.target.value)}
-          placeholder="ex) 묵묵하게 할 일을 해내던 사람"
+          placeholder="ex) 묵묵히 할 일을 해내던 사람"
           className="bg-input border-border"
         />
       </div>
@@ -222,7 +217,7 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
         <Textarea
           value={answers.q6}
           onChange={(e) => updateAnswer("q6", e.target.value)}
-          placeholder="스스로 괜찮다고 느낀 선택"
+          placeholder="결과와 상관없이, 스스로 괜찮다고 느껴진 선택"
           className="bg-input border-border min-h-[80px]"
         />
       </div>
@@ -235,7 +230,7 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
         <Textarea
           value={answers.q7}
           onChange={(e) => updateAnswer("q7", e.target.value)}
-          placeholder="아쉬웠던 순간 하나"
+          placeholder="조금만 다르게 행동했으면 어땠을지 떠올려보세요"
           className="bg-input border-border min-h-[80px]"
         />
       </div>
@@ -243,12 +238,12 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
       {/* Q8 */}
       <div className="space-y-3">
         <Label className="text-base font-medium text-foreground">
-          8. 1월 동안 유독 자주 떠올랐던 사람이 있었을까요? (선택)
+        8. 1월을 보내며 유독 마음에 남았던 사람이 있었나요?
         </Label>
         <Input
           value={answers.q8}
           onChange={(e) => updateAnswer("q8", e.target.value)}
-          placeholder="이름이나 관계"
+          placeholder="이름, 관계, 혹은 상황만 적어도 괜찮아요"
           className="bg-input border-border"
         />
       </div>
@@ -261,7 +256,7 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
         <Input
           value={answers.q9}
           onChange={(e) => updateAnswer("q9", e.target.value)}
-          placeholder="고마움, 미안함, 그리움 .."
+          placeholder="그리움,고마움,사랑 ..."
           className="bg-input border-border"
         />
       </div>
@@ -342,7 +337,7 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
         <Textarea
           value={answers.q12}
           onChange={(e) => updateAnswer("q12", e.target.value)}
-          placeholder="ex) 마감 기한이 닥쳐야 집중력이 폭발한다는 걸 다시금 깨달음"
+          placeholder="ex) 생각보다 내가 잘 버티고 있다는 사실"
           className="bg-input border-border min-h-[100px]"
         />
       </div>
@@ -355,7 +350,7 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
         <Input
           value={answers.q13}
           onChange={(e) => updateAnswer("q13", e.target.value)}
-          placeholder="스스로에게 남기고 싶은 말"
+          placeholder="조언, 응원, 혹은 당부도 괜찮아요"
           className="bg-input border-border"
         />
       </div>

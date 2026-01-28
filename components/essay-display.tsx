@@ -45,7 +45,7 @@ export function EssayDisplay({ essay, imageUrl, onReset }: EssayDisplayProps) {
       {/* 인스타 안내 */}
       {isInstagram && (
         <p className="text-center text-sm text-muted-foreground">
-          📌 이미지를 꾹 눌러 ‘사진 저장’을 해주세요
+          📌 이미지를 꾹 누르면 저장이 가능합니다.
         </p>
       )}
 
