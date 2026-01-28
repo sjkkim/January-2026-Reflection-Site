@@ -31,7 +31,7 @@ export function EssayDisplay({ essay, imageUrl, onReset }: EssayDisplayProps) {
         </p>
       </div>
 
-      {/* ✅ 저장 가능한 이미지 */}
+      {/* 저장 가능한 이미지 */}
       {imageUrl && (
         <div className="rounded-xl overflow-hidden shadow">
           <img
@@ -45,7 +45,7 @@ export function EssayDisplay({ essay, imageUrl, onReset }: EssayDisplayProps) {
       {/* 인스타 안내 */}
       {isInstagram && (
         <p className="text-center text-sm text-muted-foreground">
-          📌 이미지를 꾹 누르면 저장이 가능합니다.
+          📌 마음에 들면 이미지를 꾹 눌러 저장해 보세요.
         </p>
       )}
 
