@@ -16,11 +16,11 @@ export async function POST(req: NextRequest) {
 
     // ✅ Edge에서 폰트 로드 (fetch 방식)
     const titleFont = await fetch(
-      new URL("/fonts/NotoSerifKR-Regular.otf", req.url)
+      new URL("/fonts/NotoSerifKR-Regular.woff2", req.url)
     ).then(res => res.arrayBuffer())
-
+    
     const bodyFont = await fetch(
-      new URL("/fonts/NotoSansKR-Regular.otf", req.url)
+      new URL("/fonts/NotoSansKR-Regular.woff2", req.url)
     ).then(res => res.arrayBuffer())
 
     return new ImageResponse(
