@@ -93,7 +93,7 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
         <Input
           value={answers.q1}
           onChange={(e) => updateAnswer("q1", e.target.value)}
-          placeholder="ex) 조용하지만 계속 마음이 바빴던 시간"
+          placeholder="예) 바쁘게 흘러갔지만 완전히 나쁘지는 않았던 달"
           className="bg-input border-border focus:ring-ring"
         />
       </div>
@@ -122,7 +122,7 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
             border-2
             border-gray-400
             data-[state=checked]:border-primary"/>
-            <Label htmlFor="q2-2" className="font-normal cursor-pointer">무난하고 잔잔했다</Label>
+            <Label htmlFor="q2-2" className="font-normal cursor-pointer">무난하고 잔잔하게 흘러갔다</Label>
           </div>
           <div className="flex items-center space-x-3">
             <RadioGroupItem value="조금 지치는 날이 많았다" id="q2-3" 
@@ -136,7 +136,7 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
         <Input
           value={answers.q2Reason}
           onChange={(e) => updateAnswer("q2Reason", e.target.value)}
-          placeholder="어떤 순간들 때문에 그렇게 느꼈는지 떠올려보세요"
+          placeholder="특히 그렇게 느꼈던 이유가 있다면 적어보세요"
           className="bg-input border-border mt-2"
         />
       </div>
@@ -149,8 +149,7 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
         <Textarea
           value={answers.q3}
           onChange={(e) => updateAnswer("q3", e.target.value)}
-          placeholder="언제, 어디서, 누구와 있었는지 떠올려보세요
-          아주 사소한 장면도 괜찮아요"
+          placeholder="그날의 상황을 간단히 적어보세요"
           className="bg-input border-border min-h-[100px]"
         />
       </div>
@@ -166,32 +165,32 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
           className="flex flex-col gap-2"
         >
           <div className="flex items-center space-x-3">
-            <RadioGroupItem value="성취감을 느꼈기 때문에" id="q4-1" className="h-5 w-5
+            <RadioGroupItem value="성취감을 느낀 순간이어서" id="q4-1" className="h-5 w-5
             border-2
             border-gray-400
             data-[state=checked]:border-primary"/>
-            <Label htmlFor="q4-1" className="font-normal cursor-pointer">성취감을 느꼈기 때문에</Label>
+            <Label htmlFor="q4-1" className="font-normal cursor-pointer">성취감을 느낀 순간이어서</Label>
           </div>
           <div className="flex items-center space-x-3">
-            <RadioGroupItem value="조금 버거웠던 기억이라" id="q4-2" className="h-5 w-5
+            <RadioGroupItem value="생각보다 부담이 컸던 순간이라서" id="q4-2" className="h-5 w-5
             border-2
             border-gray-400
             data-[state=checked]:border-primary"/>
-            <Label htmlFor="q4-2" className="font-normal cursor-pointer">조금 버거웠던 기억이라</Label>
+            <Label htmlFor="q4-2" className="font-normal cursor-pointer">생각보다 부담이 컸던 순간이라서</Label>
           </div>
           <div className="flex items-center space-x-3">
-            <RadioGroupItem value="나를 조금 바꿔놓았기 때문에" id="q4-3" className="h-5 w-5
+            <RadioGroupItem value="이후의 선택이나 태도에 영향을 줘서" id="q4-3" className="h-5 w-5
             border-2
             border-gray-400
             data-[state=checked]:border-primary"/>
-            <Label htmlFor="q4-3" className="font-normal cursor-pointer">나를 조금 바꿔놓았기 때문에</Label>
+            <Label htmlFor="q4-3" className="font-normal cursor-pointer">이후의 선택이나 태도에 영향을 줘서</Label>
           </div>
           <div className="flex items-center space-x-3">
-            <RadioGroupItem value="특별한 이유는 없지만 잊히지 않아서" id="q4-4" className="h-5 w-5
+            <RadioGroupItem value="특별한 이유는 없지만 계속 떠올라서" id="q4-4" className="h-5 w-5
             border-2
             border-gray-400
             data-[state=checked]:border-primary"/>
-            <Label htmlFor="q4-4" className="font-normal cursor-pointer">특별한 이유는 없지만 잊히지 않아서</Label>
+            <Label htmlFor="q4-4" className="font-normal cursor-pointer">특별한 이유는 없지만 계속 떠올라서</Label>
           </div>
         </RadioGroup>
       </div>
@@ -204,7 +203,7 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
         <Input
           value={answers.q5}
           onChange={(e) => updateAnswer("q5", e.target.value)}
-          placeholder="ex) 묵묵히 할 일을 해내던 사람"
+          placeholder="예) 해야 할 일에 집중하고 있던 상태"
           className="bg-input border-border"
         />
       </div>
@@ -217,7 +216,7 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
         <Textarea
           value={answers.q6}
           onChange={(e) => updateAnswer("q6", e.target.value)}
-          placeholder="결과와 상관없이, 스스로 괜찮다고 느껴진 선택"
+          placeholder="예) 미뤄두던 일을 정리하기 시작한 것"
           className="bg-input border-border min-h-[80px]"
         />
       </div>
@@ -230,7 +229,7 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
         <Textarea
           value={answers.q7}
           onChange={(e) => updateAnswer("q7", e.target.value)}
-          placeholder="조금만 다르게 행동했으면 어땠을지 떠올려보세요"
+          placeholder="예) 그 상황을 조금 더 여유 있게 대응했으면"
           className="bg-input border-border min-h-[80px]"
         />
       </div>
@@ -243,7 +242,7 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
         <Input
           value={answers.q8}
           onChange={(e) => updateAnswer("q8", e.target.value)}
-          placeholder="이름, 관계, 혹은 상황만 적어도 괜찮아요"
+          placeholder="예) 자주 보던 동료, 우연히 도움을 준 사람"
           className="bg-input border-border"
         />
       </div>
@@ -256,7 +255,7 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
         <Input
           value={answers.q9}
           onChange={(e) => updateAnswer("q9", e.target.value)}
-          placeholder="그리움,고마움,사랑 ..."
+          placeholder="예) 고마움, 편안함, 아쉬움"
           className="bg-input border-border"
         />
       </div>
@@ -270,19 +269,19 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
           <Input
             value={answers.q10_1}
             onChange={(e) => updateAnswer("q10_1", e.target.value)}
-            placeholder="키워드 1"
+            placeholder="#업무"
             className="bg-input border-border"
           />
           <Input
             value={answers.q10_2}
             onChange={(e) => updateAnswer("q10_2", e.target.value)}
-            placeholder="키워드 2"
+            placeholder="#운동"
             className="bg-input border-border"
           />
           <Input
             value={answers.q10_3}
             onChange={(e) => updateAnswer("q10_3", e.target.value)}
-            placeholder="키워드 3"
+            placeholder="#독서"
             className="bg-input border-border"
           />
         </div>
@@ -337,7 +336,7 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
         <Textarea
           value={answers.q12}
           onChange={(e) => updateAnswer("q12", e.target.value)}
-          placeholder="ex) 생각보다 내가 잘 버티고 있다는 사실"
+          placeholder="예) 혼자 정리하는 시간이 있어야 마음이 안정된다"
           className="bg-input border-border min-h-[100px]"
         />
       </div>
@@ -350,7 +349,7 @@ export function ReflectionForm({ onGenerate, isLoading }: ReflectionFormProps) {
         <Input
           value={answers.q13}
           onChange={(e) => updateAnswer("q13", e.target.value)}
-          placeholder="조언, 응원, 혹은 당부도 괜찮아요"
+          placeholder=""
           className="bg-input border-border"
         />
       </div>
